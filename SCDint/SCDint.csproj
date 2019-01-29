@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A37BD2F7-A775-4A45-A891-54D9BD8DC2EC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SCDint</RootNamespace>
+    <AssemblyName>SCDint</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>SCDint.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ICO_APP.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.Compatibility" />
+    <Reference Include="ScintillaNET, Version=3.6.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\jacobslusser.ScintillaNET.3.6.3\lib\net40\ScintillaNET.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FRM_CALC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_CALC.Designer.cs">
+      <DependentUpon>FRM_CALC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_CONFIG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_CONFIG.Designer.cs">
+      <DependentUpon>FRM_CONFIG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_DEBUG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_DEBUG.Designer.cs">
+      <DependentUpon>FRM_DEBUG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_EM_SET.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_EM_SET.Designer.cs">
+      <DependentUpon>FRM_EM_SET.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_EXE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_EXE.Designer.cs">
+      <DependentUpon>FRM_EXE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_INVOEDIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_INVOEDIT.Designer.cs">
+      <DependentUpon>FRM_INVOEDIT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_MAIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_MAIN.Designer.cs">
+      <DependentUpon>FRM_MAIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_MSGEDIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_MSGEDIT.Designer.cs">
+      <DependentUpon>FRM_MSGEDIT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_PROCHOOK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_PROCHOOK.Designer.cs">
+      <DependentUpon>FRM_PROCHOOK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_SAPMAKE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_SAPMAKE.Designer.cs">
+      <DependentUpon>FRM_SAPMAKE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_SAVE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_SAVE.Designer.cs">
+      <DependentUpon>FRM_SAVE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_SCD_EDIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_SCD_EDIT.Designer.cs">
+      <DependentUpon>FRM_SCD_EDIT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LIB_AOT_GEN.cs" />
+    <Compile Include="LIB_EMD.cs" />
+    <Compile Include="LIB_EXE.cs" />
+    <Compile Include="LIB_ITEM.cs" />
+    <Compile Include="LIB_MEMORY.cs" />
+    <Compile Include="LIB_MOTION.cs" />
+    <Compile Include="LIB_MSG.cs" />
+    <Compile Include="LIB_RDT.cs" />
+    <Compile Include="Memory.cs" />
+    <Compile Include="NumberedRTB.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NumberedRTB.designer.cs">
+      <DependentUpon>NumberedRTB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PARSER_SCD2.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FRM_CALC.resx">
+      <DependentUpon>FRM_CALC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_CONFIG.resx">
+      <DependentUpon>FRM_CONFIG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_DEBUG.resx">
+      <DependentUpon>FRM_DEBUG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_EM_SET.resx">
+      <DependentUpon>FRM_EM_SET.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_EXE.resx">
+      <DependentUpon>FRM_EXE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_INVOEDIT.resx">
+      <DependentUpon>FRM_INVOEDIT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_MAIN.resx">
+      <DependentUpon>FRM_MAIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_MSGEDIT.resx">
+      <DependentUpon>FRM_MSGEDIT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_PROCHOOK.resx">
+      <DependentUpon>FRM_PROCHOOK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_SAPMAKE.resx">
+      <DependentUpon>FRM_SAPMAKE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_SAVE.resx">
+      <DependentUpon>FRM_SAVE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_SCD_EDIT.resx">
+      <DependentUpon>FRM_SCD_EDIT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NumberedRTB.resx">
+      <DependentUpon>NumberedRTB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ICO_APP.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
