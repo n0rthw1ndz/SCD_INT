@@ -163,5 +163,14 @@ namespace SCDint
             UInt32 nSize,
             ref IntPtr lpNumberOfBytesWritten
             );
+
+        [DllImport("kernel32.dll", SetLastError = true)]
+        internal static extern bool SetProcessWorkingSetSize(
+            IntPtr hProcess,
+            UInt32 dwMinimumWorkingSetSize,
+            UInt32 dwMaximumWorkingSetSize,
+            UInt32 Flags
+            );
+
     }
 }

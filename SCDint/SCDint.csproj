@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SCDint</RootNamespace>
     <AssemblyName>SCDint</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -59,6 +59,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CALC_FORM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CALC_FORM.Designer.cs">
+      <DependentUpon>CALC_FORM.cs</DependentUpon>
+    </Compile>
     <Compile Include="FRM_CALC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +155,9 @@
     <Compile Include="PARSER_SCD2.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CALC_FORM.resx">
+      <DependentUpon>CALC_FORM.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FRM_CALC.resx">
       <DependentUpon>FRM_CALC.cs</DependentUpon>
     </EmbeddedResource>

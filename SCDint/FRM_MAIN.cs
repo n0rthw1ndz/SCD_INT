@@ -68,6 +68,7 @@ namespace SCDint
 
         FRM_DEBUG DEBUG_FORM = new FRM_DEBUG();
         FRM_CALC CALC_FORM = new FRM_CALC();
+        CalcTest CALC_TEST = new CalcTest();
         FRM_CONFIG CONFIG_FORM = new FRM_CONFIG();
         FRM_SAPMAKE SAP_FORM = new FRM_SAPMAKE();
         FRM_MSGEDIT MSG_FORM = new FRM_MSGEDIT();
@@ -80,12 +81,12 @@ namespace SCDint
 
         private void FRM_MAIN_Resize(object sender, EventArgs e)
         {
-            // LST_CODE.Width = (this.Width - 16) - 620;
-            //    LST_CODE.Height = this.Height - 150;
-            //  LST_BYTE.Width = (this.Width - 16) - 620;
-            //   LST_BYTE.Height = this.Height - 150;
+             LST_CODE.Width = (this.Width - 16) - 400;
+                LST_CODE.Height = this.Height - 150;
+              LST_BYTE.Width = (this.Width - 16) - 400;
+               LST_BYTE.Height = this.Height - 150;
 
-            //  LST_PROP.Left = panel_scd.Width;
+             //LST_PROP.Left = panel_scd.Width;
             // LST_PROP.Height = this.Height - 250;
 
          
@@ -3197,21 +3198,29 @@ namespace SCDint
 
         private void F_LISTBOX_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string fpath = F_LISTBOX.Path + "\\" + F_LISTBOX.SelectedItem.ToString();
-            relative_flag = 1;
 
-
-
-            if (selected_path.Substring(selected_path.Length - 11, 4) == "BIO2")
+            try
             {
-                BIO2_PARSE_SCD(fpath, relative_flag);
-            }
-            else if (selected_path.Substring(selected_path.Length - 11, 4) == "BIO3")
-            {
-              
-                BIO3_PARSE_SCD(fpath, relative_flag);
-            }
+                if (F_LISTBOX.SelectedItem.ToString().Substring(F_LISTBOX.SelectedItem.ToString().Length - 3, 3) == "SCD")
+                {
+                    string fpath = F_LISTBOX.Path + "\\" + F_LISTBOX.SelectedItem.ToString();
 
+                    relative_flag = 1;
+
+                    if (selected_path.Substring(selected_path.Length - 11, 4) == "BIO2")
+                    {
+                        BIO2_PARSE_SCD(fpath, relative_flag);
+                    }
+                    else if (selected_path.Substring(selected_path.Length - 11, 4) == "BIO3")
+                    {
+                        BIO3_PARSE_SCD(fpath, relative_flag);
+                    }
+                }
+            }
+                        
+            catch (Exception ex) {
+                throw ex;
+            }
            
         }
 
@@ -3372,6 +3381,12 @@ namespace SCDint
             if (e.Button.Name == "TBTN_SAVE")
             {
                 SAVE_FORM.ShowDialog();
+            }
+
+
+            if (e.Button.Name == "TBTN_CALC") {
+
+                CALC_TEST.ShowDialog();
             }
 
 
@@ -3744,6 +3759,11 @@ namespace SCDint
 
             SCDEDITOR.ShowDialog();
 
+
+        }
+
+        private void Panel_scd_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }
